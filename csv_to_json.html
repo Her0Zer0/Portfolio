@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CSV to Json</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Place CSV Below: </h2>
+                <textarea id="csv_area" class="form-control" rows="20"></textarea>
+                <ul class="list-unstyled list-inline" style="margin-top: 16px;">
+                    <li><label>Delimiter</label></li>
+                    <li>
+                        <select id="delimiter_val" class="form-control">
+                            <option value="1">&comma;</option>
+                            <option value="2">&semi;</option>
+                            <option value="3">&#124;</option>
+                        </select>
+                    </li>
+
+                    <li>
+                        <button id="convert_to_json" class="btn btn-default">Convert to Json</button>
+                    </li>
+                </ul>
+    
+                
+            </div>
+
+            <div class="col-md-6">
+                <h2>Json Output Below: </h2>
+                <textarea id="json_area" class="form-control" rows="20"></textarea>
+                <ul class="list-unstyled list-inline" style="margin-top: 16px;">
+                    <li>
+                        <button id="copy_to_clipboard" class="btn btn-default">Copy Json</button>
+                    </li>
+                    <li>
+                        <button id="clear_the_board" class="btn btn-danger">Clear Boards</button>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script>
+        let mCsv = document.querySelector("#csv_area");
+        let mJson = document.querySelector("#json_area");
+        let delimiter = document.querySelector("#delimiter_val");
+
+        function convertCsvToJson(csv, delimter){
+            var lines = csv.split("\n");
+            var headers = lines[0].split(delimter);
+            var res = [];
+            for(var i = 1; i < lines.length; i++){
+                var obj = {};
+                var currentLine = lines[i].split(delimter);
+
+                if(currentLine.length > 1){
+                    for(var j = 0; j < headers.length; j++){
+                    obj[ headers[j] ] = currentLine[j];
+                    }
+
+                    res.push(obj);
+                }
+
+            }
+
+            return res;
+        }
+
+        document.querySelector("#convert_to_json").onclick = () => {
+           var data = convertCsvToJson(mCsv.value, delimiter.selectedOptions[0].text);
+           mJson.value = JSON.stringify(data);
+        }
+
+        document.querySelector("#copy_to_clipboard").onclick = () => {
+            mJson.select();
+            document.execCommand("copy");
+        }
+
+        document.querySelector("#clear_the_board").onclick = () => {
+            mCsv.value = "";
+            mJson.value = "";
+        }
+
+
+
+    </script>
+
+</body>
+</html>
