@@ -1,4 +1,4 @@
-# Random-Helpful-Tools
+# Random-Apps-And-Tools
 A place of random tools that have been built when they was needed
 
 
@@ -7,3 +7,8 @@ A place of random tools that have been built when they was needed
 
 ## [Focus Timer](https://github.com/Her0Zer0/FocusTimer)
 ![focus-timer](https://github.com/Her0Zer0/FocusTimer/blob/focus-timer/assets/timer-expired.png)
+
+## Fun Animations
+
+### [Coding Fun Desktop](https://github.com/Her0Zer0/coding-fun-desktop)
+![demo](https://github.com/Her0Zer0/coding-fun-desktop/blob/master/animation.gif)
