@@ -3,7 +3,7 @@ A place of random tools that have been built when they was needed
 
 
 ## [CSV to JSON](https://github.com/Her0Zer0/CSV2JSON/tree/main)
-![demo image](./demo.PNG)
+![demo image](https://github.com/Her0Zer0/CSV2JSON/blob/main/demo.PNG)
 
 ## [Focus Timer](https://github.com/Her0Zer0/FocusTimer)
 ![focus-timer](https://github.com/Her0Zer0/FocusTimer/blob/focus-timer/assets/timer-expired.png)
