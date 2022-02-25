@@ -1,12 +1,18 @@
-# Random-Apps-And-Tools
+# Portfolio
 A place of random tools that have been built when they was needed
+  1. [Random Apps](#random-apps)
+  2. [Fun Animations](#fun-animations)
+  3. [ServiceNow](#servicenow)
 
-
-## [CSV to JSON](https://github.com/Her0Zer0/CSV2JSON/tree/main)
+## Random Apps
+### [CSV to JSON](https://github.com/Her0Zer0/CSV2JSON/tree/main)
 ![demo image](https://github.com/Her0Zer0/CSV2JSON/blob/main/demo.PNG)
 
-## [Focus Timer](https://github.com/Her0Zer0/FocusTimer)
+### [Focus Timer](https://github.com/Her0Zer0/FocusTimer)
 ![focus-timer](https://github.com/Her0Zer0/FocusTimer/blob/focus-timer/assets/timer-expired.png)
+
+### [PS_AgencyShare](https://github.com/Her0Zer0/PS_AgencyShare)
+![demo](https://github.com/Her0Zer0/PS_AgencyShare/blob/master/demo.png)
 
 ## Fun Animations
 
@@ -20,3 +26,5 @@ A place of random tools that have been built when they was needed
 
 ### [Sample Portal Login](https://github.com/Her0Zer0/ServiceNow-Portal-Login)
 ![demo](https://github.com/Her0Zer0/ServiceNow-Portal-Login/blob/main/elite_login_demo.PNG)
+
+
