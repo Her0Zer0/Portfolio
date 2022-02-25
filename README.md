@@ -1,5 +1,5 @@
 # Portfolio
-A place of random tools that have been built when they was needed
+A collection of sample apps and projects that I've built in my spare time. Please download and enjoy :)
   1. [Random Apps](#random-apps)
   2. [Fun Animations](#fun-animations)
   3. [ServiceNow](#servicenow)
@@ -13,6 +13,9 @@ A place of random tools that have been built when they was needed
 
 ### [PS_AgencyShare](https://github.com/Her0Zer0/PS_AgencyShare)
 ![demo](https://github.com/Her0Zer0/PS_AgencyShare/blob/master/demo.png)
+
+### [Maths-Game](https://github.com/Her0Zer0/Maths-Game)
+![demo](https://github.com/Her0Zer0/Maths-Game/blob/main/demo.gif)
 
 ## Fun Animations
 
